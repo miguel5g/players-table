@@ -2,8 +2,11 @@ import FilterBadge from '../components/FilterBadge.jsx';
 import FilterByName from '../components/FilterByName.jsx';
 import FilterByNumericColumn from '../components/FilterByNumericColumn.jsx';
 import PlayerTableRow from '../components/PlayerTableRow.jsx';
+import { usePlayers } from '../hooks/usePlayers.js';
 
 function Home() {
+  const { players, filters } = usePlayers();
+
   return (
     <div className="flex items-start justify-center min-h-screen px-6 py-16">
       <div className="flex flex-col w-full max-w-4xl gap-8">
@@ -13,7 +16,11 @@ function Home() {
           <FilterByNumericColumn />
         </header>
 
-        <section className="flex gap-2">{/** @todo implements */}</section>
+        <section className="flex gap-2">
+          {Object.entries(filters).map(([column, filter]) => (
+            <FilterBadge key={column} filter={{ ...filter, column }} />
+          ))}
+        </section>
 
         <table className="table">
           <thead>
@@ -27,9 +34,9 @@ function Home() {
           </thead>
 
           <tbody>
-            {/* {players.map((player) => (
+            {players.map((player) => (
               <PlayerTableRow key={player.id} player={player} />
-            ))} */}
+            ))}
           </tbody>
         </table>
       </div>
