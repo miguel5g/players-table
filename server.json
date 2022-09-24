@@ -1,0 +1,68 @@
+{
+  "players": [
+    {
+      "id": "45425a48-e9f5-419f-b3bb-ff15204c2f9b",
+      "name": "Wallace Mertz",
+      "nickname": "Wallace_Mertz",
+      "victories": 2,
+      "defeats": 18,
+      "draws": 2
+    },
+    {
+      "id": "ae905a82-8348-43b3-bad4-7e5806da7576",
+      "name": "Sherri Jacobson",
+      "nickname": "Sherri_Jacobson",
+      "victories": 12,
+      "defeats": 12,
+      "draws": 11
+    },
+    {
+      "id": "541a081c-7ce5-44df-9e01-18c942da16f3",
+      "name": "Roland Aufderhar",
+      "nickname": "Roland78",
+      "victories": 11,
+      "defeats": 15,
+      "draws": 0
+    },
+    {
+      "id": "f0b14034-b761-4afa-8251-c892ba905638",
+      "name": "Tyrone Adams",
+      "nickname": "Tyrone79",
+      "victories": 51,
+      "defeats": 20,
+      "draws": 16
+    },
+    {
+      "id": "8d610803-a1c6-48ea-bd36-24258a27a577",
+      "name": "Constance Ratke",
+      "nickname": "Constance_Ratke32",
+      "victories": 64,
+      "defeats": 16,
+      "draws": 12
+    },
+    {
+      "id": "d82bb229-d919-47aa-a21a-6775198a147b",
+      "name": "Lois Crona",
+      "nickname": "Lois.Crona",
+      "victories": 2,
+      "defeats": 19,
+      "draws": 8
+    },
+    {
+      "id": "a5f61398-0877-4382-af60-3ce9767c66ee",
+      "name": "Donnie Maggio",
+      "nickname": "Donnie74",
+      "victories": 31,
+      "defeats": 9,
+      "draws": 5
+    },
+    {
+      "id": "275a2faa-8677-4f9a-926c-b5dcd720c4e6",
+      "name": "Marco Hagenes",
+      "nickname": "Marco.Hagenes31",
+      "victories": 48,
+      "defeats": 10,
+      "draws": 0
+    }
+  ]
+}
