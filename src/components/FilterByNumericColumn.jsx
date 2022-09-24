@@ -1,6 +1,3 @@
-import { useState } from 'react';
-import { usePlayers } from '../hooks/usePlayers';
-
 const columnsMapper = {
   victories: 'Vitórias',
   defeats: 'Derrotas',
@@ -8,62 +5,28 @@ const columnsMapper = {
 };
 
 function FilterByNumericColumn() {
-  const [column, setColumn] = useState('');
-  const [operator, setOperator] = useState('EQUAL');
-  const [value, setValue] = useState(0);
-
-  const { usedFilters, filterByNumericColumn } = usePlayers();
-
-  const validColumns = ['victories', 'defeats', 'draws'].filter((validColumn) => {
-    return !usedFilters.find((filter) => filter.column === validColumn);
-  });
+  const validColumns = ['victories', 'defeats', 'draws'];
 
   function handleFilter(event) {
     event.preventDefault();
-
-    if (validColumns.length === 0) return;
-
-    const isValidColumn = validColumns.includes(column);
-
-    filterByNumericColumn(isValidColumn ? column : validColumns[0], operator, value);
   }
 
   return (
     <form className="flex items-center gap-2" onSubmit={handleFilter}>
       <label htmlFor="column-filter">Coluna</label>
-      <select
-        id="column-filter"
-        className="text-slate-800"
-        value={column}
-        onChange={(event) => setColumn(event.target.value)}
-      >
-        {validColumns.map((validColumn) => (
-          <option key={validColumn} value={validColumn}>
-            {columnsMapper[validColumn]}
-          </option>
-        ))}
+      <select id="column-filter" className="text-slate-800">
+        {/** @todo implements */}
       </select>
 
       <label htmlFor="operator-filter">Operador</label>
-      <select
-        id="operator-filter"
-        className="text-slate-800"
-        value={operator}
-        onChange={(event) => setOperator(event.target.value)}
-      >
+      <select id="operator-filter" className="text-slate-800">
         <option value="EQUAL">Igual a</option>
         <option value="LESS THAN">Menor que</option>
         <option value="BIGGER THAN">Maior que</option>
       </select>
 
       <label htmlFor="filter-value">Valor do filtro</label>
-      <input
-        id="filter-value"
-        className="w-32"
-        type="number"
-        value={value}
-        onChange={(event) => setValue(+event.target.value)}
-      />
+      <input id="filter-value" className="w-32" type="number" />
 
       <button className="button" type="submit">
         Filtrar
