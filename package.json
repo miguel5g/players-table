@@ -1,0 +1,12 @@
+{
+  "name": "best-players-data-generator",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node .",
+    "server": "npx json-server src/data/server.json"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^7.5.0"
+  }
+}
